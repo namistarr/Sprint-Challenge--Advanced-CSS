@@ -1,1 +1,24 @@
 // Mixins Here
+.hover-mixin() {
+    &:hover {
+      background-color: white;
+      color: @btn-bg-color     
+    }
+  }
+  .center() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+.sign-up-button (@w, @c) {
+    .center();
+    border-radius: 6px;
+    background-color: @btn-bg-color;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: @c;
+    width: @w;
+    height: 36px;
+    .hover-mixin();
+}
